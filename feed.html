@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="dsce-logo.png" alt="Dayananda Sagar College of Engineering" width="100px" height="100px">
+
+        <p class="dsce">
+            Dayananda Sagar College of Engineering
+        </p>
+    </div>
+
+    <hr style="height:2px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0)">
+
+    <form class="feedback" action="" name="feedbacksystem">
+
+
+
+        <label for="dept">Choose a department name:<br></label>
+        <select name="Department" class="dept">
+            <option value="none" selected disabled hidden name="Department">Select an Option</option>
+            <option value="aiml" name="Department">Artificial Intelligence and Machine Learning</option>
+            <option value="aero" name="Department">Aeronautical</option>
+            <option value="auto" name="Department">Automobile</option>
+            <option value="bio" name="Department">Biotechnology</option>
+            <option value="cse" name="Department">Computer Science</option>
+            <option value="csd" name="Department">Computer Science and Design</option>
+            <option value="che" name="Department">Chemical</option>
+            <option value="civil" name="Department">Civil</option>
+            <option value="eee" name="Department">Electrical and Electronics</option>
+            <option value="ece" name="Department">Electronics and communication</option>
+            <option value="ise" name="Department">Information Science</option>
+            <option value="eie" name="Department">Electronics and Instrumentation</option>
+            <option value="me" name="Department">Mechanical</option>
+            <option value="mee" name="Department">Medical Electronics</option>
+            <option value="ete" name="Department">Electronics and Telecommunications</option>
+        </select>
+
+
+
+        <div class="rate">
+            How would you rate the department?
+        </div>
+        <div class="star">
+
+            <input class="star star-5" id="star-5" type="radio" name="Rating" value="5" />
+            <label class="star star-5" for="star-5"></label>
+            <input class="star star-4" id="star-4" type="radio" name="Rating" value="4" />
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-3" id="star-3" type="radio" name="Rating" value="3" />
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-2" id="star-2" type="radio" name="Rating" value="2" />
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-1" id="star-1" type="radio" name="Rating" value="1" />
+            <label class="star star-1" for="star-1"></label>
+        </div>
+
+
+
+        <div class="review">
+            <div class="question">
+                How was your visit to the department?
+            </div>
+            <div class="answer">
+                <textarea rows="5" cols=auto id="suggest" name="Review"></textarea>
+                <br />
+            </div>
+
+        </div>
+
+
+
+        <div class="review">
+            <div class="question">
+                Please give your feedback
+            </div>
+            <div class="answer">
+                <textarea rows="5" cols=auto id="feed" name="Feedback"></textarea>
+                <br />
+            </div>
+
+        </div>
+
+
+
+        <input type="submit" value="Submit" class="submit">
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwPnnFKxqwE_tRwZ2CMUKqx3pmiIXfB1sABwdYLY0M6cZfQ3yyIvfspgfPk2VdNHf5mhg/exec'
+        const form = document.forms['feedbacksystem']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => document.location.reload(true))
+                .catch(error => console.error('Error!', error.message));
+
+
+        })
+    </script>
+</body>
+
+</html>

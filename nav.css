@@ -1,0 +1,78 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(222, 241, 247);
+    background: linear-gradient(90deg, rgba(222, 241, 247, 1) 0%, rgba(238, 249, 254, 1) 2%, rgba(187, 243, 255, 1) 100%);
+    background: rgb(222, 241, 247);
+    background: radial-gradient(circle, rgba(222, 241, 247, 1) 0%, rgba(238, 249, 254, 1) 2%, rgba(187, 243, 255, 1) 100%);
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    align-self: flex-start;
+    margin: 20px;
+    flex-shrink: 2;
+}
+
+.dsce {
+    text-align: center;
+    flex-grow: 3;
+    margin-top: 25px;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+#dest {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: rgb(255, 255, 151);
+}
+
+#input {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    height: 100px;
+}
+
+
+#submit {
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(255, 255, 151);
+    border: 1px solid black;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.foot{
+    background-color:rgb(255, 255, 151);
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="src" href="nav.js">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSCE Navigation</title>
+</head>
+
+<body id="body">
+    <div class="header">
+        <img class="logo" src="dsce-logo.png" alt="Dayananda Sagar College of Engineering" width="100px" height="100px">
+
+        <p class="dsce">
+            Dayananda Sagar College of Engineering
+        </p>
+    </div>
+
+    <hr style="height:2px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0)">
+    <div class="main">
+        <div>
+            <form id="input" action="">
+
+                <label for="dest">Where do you want to go?<br></label>
+                <select name="dest" id="dest">
+                    <option value="0" selected disabled hidden>Select an Option</option>
+                    <option value="1">Heritage Block</option>
+                    <option value="2">Library</option>
+                    <option value="3">Department of Automobile Engineering</option>
+                    <option value="4">New Engineering Block</option>
+                    <option value="5">Department of Mechanical Engineering</option>
+                    <option value="6">Mechanical Labs</option>
+                    <option value="7">Department of Electrical Engineering</option>
+                    <option value="8">Department of industrial Engineering and Management</option>
+                    <option value="9">Department of Chemical Engineering</option>
+                    <option value="10">CD Sagar/Department of Biotechnology</option>
+                    <option value="11">NRI Boys Hostel</option>
+                    <option value="12">PU College/Physiotherapy/Nursing</option>
+                    <option value="13">Buisness Block</option>
+                    <option value="14">Dayananda Sagar College of Architecture</option>
+                    <option value="15">DS Buisness School</option>
+                    <option value="16">DS International School</option>
+                    <option value="17">Department of Computer Application/Electronics and Communication</option>
+                    <option value="18">Printing Shop</option>
+                    <option value="19">Department of Computer Science and Engineering/Department of Information Science
+                        and
+                        Engineering</option>
+                    <option value="20">Ladies Hostel (Sharada)</option>
+                    <option value="21">Ladies Hostel (Nelson Mandela)</option>
+                    <option value="22">Department of Electronics and Instrumentation/Medical Electronics</option>
+                    <option value="23">Boys Hostel (Sardar Patel)</option>
+                    <option value="24">Department of Civil Engineering</option>
+                    <option value="25">Dental College/DSU</option>
+                    <option value="26">Conveno/Hall of Admissions</option>
+                    <option value="27">Dr. PC Sagar Auditorium</option>
+                    <option value="28">Playground</option>
+                    <option value="29">Sagar Hospital</option>
+                    <option value="30">New Computer Science Department/ AIML Department</option>
+                    <option value="31">Parking 1</option>
+                    <option value="32">Parking 2</option>
+                    <option value="33">Indian Canteen</option>
+                    <option value="34">Amphitheatre</option>
+                    <option value="35">Mess</option>
+                    <option value="36">Temple</option>
+                    <option value="37">Meditation and Spiritual Centre</option>
+                    <option value="38">Lotus Canteen</option>
+                    <option value="39">Rock Garden</option>
+                    <option value="40">Entrance</option>
+                </select>
+
+            </form>
+            <div id="sub">
+                <button id="submit" onclick="route()">Get Route</button>
+            </div>
+        </div>
+    </div>
+    <div id="image">
+
+    </div>
+    <footer class="foot">
+        <p>Give your <a href="feed.html">Feedback</a> here&nbsp;&nbsp;&nbsp;</p>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+
+</html>
